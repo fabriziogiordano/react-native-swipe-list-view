@@ -144,6 +144,14 @@ class SwipeRow extends Component {
 		this.manuallySwipeRow(0);
 	}
 
+	/*
+	 * This method is called by SwipeListView
+	 * Exposes the location of the row
+	 */
+	getTranslateX() {
+		return this.state.translateX._value
+	}
+	
 	manuallySwipeRow(toValue) {
 		Animated.spring(this.state.translateX,
 			{
